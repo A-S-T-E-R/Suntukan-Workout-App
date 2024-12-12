@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Boxing_Trainer_App.TimerPage"
+             Title="Timer">
+
+    <StackLayout Padding="20" Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
+        <Entry x:Name="MinutesEntry" 
+               Placeholder="Minutes (Max 99)"
+               Keyboard="Numeric"
+               MaxLength="2"
+               TextColor="White"
+               BackgroundColor="Gray"
+               HeightRequest="50"
+               HorizontalOptions="FillAndExpand"/>
+
+        <Entry x:Name="SecondsEntry" 
+               Placeholder="Seconds (Max 59)"
+               Keyboard="Numeric"
+               MaxLength="2"
+               TextColor="White"
+               BackgroundColor="Gray"
+               HeightRequest="50"
+               HorizontalOptions="FillAndExpand"/>
+
+        <Button x:Name="StartButton" 
+                Text="Start Timer"
+                BackgroundColor="#8B0000"
+                TextColor="White"
+                HeightRequest="50"
+                HorizontalOptions="FillAndExpand"
+                Clicked="OnStartButtonClicked"/>
+
+        <Label x:Name="TimerLabel" 
+               Text="00:00" 
+               FontSize="48" 
+               TextColor="White"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"/>
+
+    </StackLayout>
+
+</ContentPage>

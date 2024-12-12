@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Boxing_Trainer_App.MainPage">
+
+    <AbsoluteLayout>
+        <Image Source="background.jpg"
+               Aspect="AspectFill"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               AbsoluteLayout.LayoutFlags="All"
+               AbsoluteLayout.LayoutBounds="0, 0, 1, 1" />
+
+        <ScrollView AbsoluteLayout.LayoutFlags="All"
+                    AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+            <VerticalStackLayout Padding="50,0" Spacing="25">
+                <Label Text="Warm Up"
+                       HorizontalOptions="Center"
+                       TextColor="DarkRed"
+                       FontAttributes="Bold"
+                       FontSize="50" />
+
+                <Grid ColumnDefinitions="*,*"
+                      RowDefinitions="Auto,Auto,Auto"
+                      RowSpacing="15" ColumnSpacing="15">
+  
+                    <Image Grid.Row="0" Grid.Column="0" Source="jogging.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnImageTapped" CommandParameter="jogging" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Grid.Row="0" Grid.Column="1" Source="sprint.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnImageTapped" CommandParameter="sprint" />
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <Image Grid.Row="1" Grid.Column="0" Source="jump_rope.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnImageTapped" CommandParameter="jump_rope" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Grid.Row="1" Grid.Column="1" Source="shadow_box.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnImageTapped" CommandParameter="shadow_box" />
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <Image Grid.Row="2" Grid.Column="0" Source="back_peck.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnImageTapped" CommandParameter="back_peck" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Grid.Row="2" Grid.Column="1" Source="reach_up_back.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnImageTapped" CommandParameter="reach_up_back" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+
+                <Label Text="Punch Exercises"
+                       HorizontalOptions="Center"
+                       TextColor="DarkRed"
+                       FontAttributes="Bold"
+                       FontSize="40" 
+                       Padding="0,100,0,0"/>
+
+                <Grid ColumnDefinitions="*,*"
+                      RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+                      RowSpacing="15" ColumnSpacing="15">
+                    
+                    <Image Grid.Row="3" Grid.Column="0" Source="jab.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnImageTapped" CommandParameter="jab" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Grid.Row="3" Grid.Column="1" Source="cross.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnImageTapped" CommandParameter="cross" />
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <Image Grid.Row="4" Grid.Column="0" Source="hook.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnImageTapped" CommandParameter="hook" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Grid.Row="4" Grid.Column="1" Source="uppercut.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnImageTapped" CommandParameter="uppercut" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
+    </AbsoluteLayout>
+</ContentPage>

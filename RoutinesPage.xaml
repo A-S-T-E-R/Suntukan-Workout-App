@@ -1,0 +1,19 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Boxing_Trainer_App.RoutinesPage">
+    <ScrollView>
+        <StackLayout>
+            <VerticalStackLayout>
+                <Picker x:Name="daysPicker" Title="Select Day" ItemsSource="{Binding Days}" HeightRequest="50" />
+
+                <Picker x:Name="exercisesPicker" Title="Select Exercise" ItemsSource="{Binding Exercises}" HeightRequest="50" />
+
+                <StackLayout x:Name="exercisesStack" />
+
+                <Button Text="Add Exercise" Clicked="OnAddExerciseClicked" BackgroundColor="LimeGreen"/>
+                <Button Text="Delete Exercise" Clicked="OnDeleteExerciseClicked" BackgroundColor="Red"/>
+                <Button Text="Edit Exercise" Clicked="OnEditExerciseClicked" BackgroundColor="Purple"/>
+            </VerticalStackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
